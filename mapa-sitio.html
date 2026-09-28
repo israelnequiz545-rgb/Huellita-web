@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapa del sitio | Huellita</title>
+
+    <link rel="stylesheet" href="estilos.css/estilos.css">
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span>🐾</span>
+
+            <div>
+                <h1>Huellita</h1>
+                <p>Adopta, ayuda y protege</p>
+            </div>
+
+        </div>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+        <div class="buscador-sitio">
+
+            <input
+                type="search"
+                id="busqueda-sitio"
+                placeholder="¿Qué buscas?"
+                autocomplete="off"
+            >
+
+            <button
+                id="btn-buscar-sitio"
+                type="button"
+                aria-label="Buscar"
+            >
+                🔍
+            </button>
+
+        </div>
+
+        <div class="usuario-menu" id="usuario-menu">
+
+            <button
+                class="usuario-boton"
+                id="usuario-boton"
+            >
+
+                <div class="usuario-avatar">
+                    🐶
+                </div>
+
+                <span id="nombre-usuario">
+                    Mi cuenta
+                </span>
+
+                <span class="flecha">
+                    ▾
+                </span>
+
+            </button>
+
+
+            <div
+                class="usuario-desplegable"
+                id="usuario-desplegable"
+            >
+
+                <div class="usuario-cabecera">
+
+                    <div class="usuario-avatar grande">
+                        🐶
+                    </div>
+
+                    <div>
+
+                        <strong id="usuario-nombre-menu">
+                            Mi cuenta
+                        </strong>
+
+                        <span id="usuario-correo-menu">
+                            Inicia sesión
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="usuario-opciones">
+
+                    <a href="perfil-usuario.html">
+                        👤 Mi perfil
+                    </a>
+
+                    <a href="buzon.html">
+                        📬 Mi buzón
+                    </a>
+
+                    <a href="mis-solicitudes.html">
+                        🐾 Mis solicitudes
+                    </a>
+
+                    <a
+                        href="admin.html"
+                        id="enlace-administrador"
+                        style="display: none;"
+                    >
+                        ⚙️ Panel de administración
+                    </a>
+
+                </div>
+
+
+                <button
+                    class="btn-cerrar-sesion"
+                    id="btn-cerrar-sesion"
+                >
+                    🚪 Cerrar sesión
+                </button>
+
+            </div>
+
+        </div>
+        <div class="acciones">
+
+            <a href="login.html" class="btn-login">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html" class="btn-registro">
+                📝 Registrarse
+            </a>
+
+        </div>
+
+    </header>
+    <main class="mapa-sitio">
+
+        <div class="mapa-sitio-contenido">
+
+
+            <!-- TITULO -->
+            <div class="mapa-sitio-titulo">
+
+                <span>🗺️</span>
+
+                <h1>
+                    Mapa del sitio
+                </h1>
+
+                <p>
+                    Explora las principales secciones y opciones
+                    disponibles en el Portal Huellita.
+                </p>
+
+            </div>
+            <section class="mapa-seccion">
+
+                <h2>
+                    🌐 Secciones principales
+                </h2>
+
+                <div class="mapa-grid">
+
+                    <a href="index.html" class="mapa-card">
+
+                        <span>🏠</span>
+
+                        <div>
+
+                            <h3>Inicio</h3>
+
+                            <p>
+                                Página principal del portal.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="adopta.html" class="mapa-card">
+
+                        <span>🐶</span>
+
+                        <div>
+
+                            <h3>Adopta</h3>
+
+                            <p>
+                                Conoce a los animales disponibles para adopción.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="extraviados.html" class="mapa-card">
+
+                        <span>🔎</span>
+
+                        <div>
+
+                            <h3>Extraviados y encontrados</h3>
+
+                            <p>
+                                Consulta y reporta animales extraviados.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="campanas.html" class="mapa-card">
+
+                        <span>📢</span>
+
+                        <div>
+
+                            <h3>Campañas</h3>
+
+                            <p>
+                                Conoce las campañas y actividades del portal.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="mapa-seccion">
+
+                <h2>
+                    💬 Secciones secundarias
+                </h2>
+
+                <div class="mapa-grid">
+
+                    <a href="ayuda.html" class="mapa-card">
+
+                        <span>❓</span>
+
+                        <div>
+
+                            <h3>Ayuda</h3>
+
+                            <p>
+                                Encuentra información y orientación.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="contacto.html" class="mapa-card">
+
+                        <span>📩</span>
+
+                        <div>
+
+                            <h3>Contáctanos</h3>
+
+                            <p>
+                                Comunícate con el equipo de Huellita.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="buzon.html" class="mapa-card">
+
+                        <span>📬</span>
+
+                        <div>
+
+                            <h3>Buzón</h3>
+
+                            <p>
+                                Consulta tus mensajes y notificaciones.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+            <section class="mapa-seccion">
+
+                <h2>
+                    ⚙️ Elementos adicionales
+                </h2>
+
+                <div class="mapa-grid">
+
+                    <a href="login.html" class="mapa-card">
+
+                        <span>🔐</span>
+
+                        <div>
+
+                            <h3>Iniciar sesión</h3>
+
+                            <p>
+                                Accede a tu cuenta.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="registro.html" class="mapa-card">
+
+                        <span>📝</span>
+
+                        <div>
+
+                            <h3>Registrarse</h3>
+
+                            <p>
+                                Crea una cuenta en Huellita.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="recuperar.html" class="mapa-card">
+
+                        <span>🔑</span>
+
+                        <div>
+
+                            <h3>Recuperar contraseña</h3>
+
+                            <p>
+                                Recupera el acceso a tu cuenta.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="perfil-usuario.html" class="mapa-card">
+
+                        <span>👤</span>
+
+                        <div>
+
+                            <h3>Mi perfil</h3>
+
+                            <p>
+                                Consulta la información de tu cuenta.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="mis-solicitudes.html" class="mapa-card">
+
+                        <span>🐾</span>
+
+                        <div>
+
+                            <h3>Mis solicitudes</h3>
+
+                            <p>
+                                Consulta tus solicitudes de adopción.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="crear-reporte.html" class="mapa-card">
+
+                        <span>📋</span>
+
+                        <div>
+
+                            <h3>Crear reporte</h3>
+
+                            <p>
+                                Registra un reporte de un animal.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="chat.html" class="mapa-card">
+
+                        <span>💬</span>
+
+                        <div>
+
+                            <h3>Chat</h3>
+
+                            <p>
+                                Accede al sistema de comunicación.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="404.html" class="mapa-card">
+
+                        <span>🚨</span>
+
+                        <div>
+
+                            <h3>Página de error 404</h3>
+
+                            <p>
+                                Página mostrada cuando no se encuentra un recurso.
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script
+        type="module"
+        src="js/buscador.js">
+    </script>
+
+    <script
+        type="module"
+        src="js/usuario.js">
+    </script>
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+</body>
+
+</html>

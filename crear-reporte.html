@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crear reporte | Huellita</title>
+
+    <link rel="stylesheet" href="estilos.css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span>🐾</span>
+
+            <div>
+
+                <h1>Huellita</h1>
+
+                <p>Adopta, ayuda y protege</p>
+
+            </div>
+
+        </div>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+
+<div class="buscador-sitio">
+
+    <input
+        type="search"
+        id="busqueda-sitio"
+        placeholder="¿Qué buscas?"
+        autocomplete="off"
+    >
+
+    <button
+        id="btn-buscar-sitio"
+        type="button"
+        aria-label="Buscar"
+    >
+        🔍
+    </button>
+
+</div>
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+            <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+        <div class="acciones">
+
+            <a href="login.html" class="btn-login">
+                Iniciar sesión
+            </a>
+
+            <a href="registro.html" class="btn-registro">
+                Registrarse
+            </a>
+
+        </div>
+
+    </header>
+    <section class="titulo-pagina">
+
+        <h1>Crear reporte</h1>
+
+        <p>
+            Ayúdanos a encontrar un animal extraviado o a reunirlo
+            con su familia.
+        </p>
+
+    </section>
+    <main class="seccion-crear-reporte">
+
+        <section class="formulario-reporte">
+
+            <h2>Información del reporte</h2>
+
+            <p class="texto-reporte">
+                Completa los siguientes datos para crear un reporte.
+            </p>
+
+
+            <form onsubmit="crearReporte(event)">
+                <div class="campo-reporte">
+
+                    <label for="tipo-reporte">
+                        Tipo de reporte
+                    </label>
+
+                    <select id="tipo-reporte" required>
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="extraviado">
+                            Animal extraviado
+                        </option>
+
+                        <option value="encontrado">
+                            Animal encontrado
+                        </option>
+
+                    </select>
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="especie-reporte">
+                        Especie
+                    </label>
+
+                    <select id="especie-reporte" required>
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="perro">
+                            Perro
+                        </option>
+
+                        <option value="gato">
+                            Gato
+                        </option>
+
+                    </select>
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="nombre-reporte">
+                        Nombre del animal
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre-reporte"
+                        placeholder="Ejemplo: Max"
+                        required
+                    >
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="zona-reporte">
+                        Zona
+                    </label>
+
+                    <input
+                        type="text"
+                        id="zona-reporte"
+                        placeholder="Ejemplo: Nezahualcóyotl"
+                        required
+                    >
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="fecha-reporte">
+                        Fecha del reporte
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha-reporte"
+                        required
+                    >
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="descripcion-reporte">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion-reporte"
+                        rows="6"
+                        placeholder="Describe al animal, sus características o cualquier información que pueda ayudar a identificarlo."
+                        required
+                    ></textarea>
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="contacto-reporte">
+                        Medio de contacto
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contacto-reporte"
+                        placeholder="Teléfono o correo electrónico"
+                        required
+                    >
+
+                </div>
+                <div class="campo-reporte">
+
+                    <label for="imagen-reporte">
+                        Imagen del animal
+                    </label>
+
+                    <input
+                        type="file"
+                        id="imagen-reporte"
+                        accept="image/*"
+                    >
+
+                    <small>
+                        Puedes agregar una fotografía para facilitar
+                        su identificación.
+                    </small>
+
+                </div>
+                <button
+                    type="submit"
+                    class="btn-enviar-reporte"
+                >
+                    Crear reporte
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+    <a href="chat.html" class="chat-boton">
+        💬
+    </a>
+    <footer class="footer">
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+
+                <h2>🐾 Huellita</h2>
+
+                <p>
+                    Adopta, ayuda y protege.
+                </p>
+
+            </div>
+ <div class="footer-enlaces">
+
+                <h3>🌐 Portal</h3>
+
+                <a href="index.html">🏠 Inicio</a>
+
+                <a href="adopta.html">🐶 Adopta</a>
+
+                <a href="extraviados.html">
+                    🔎 Extraviados y encontrados
+                </a>
+
+                <a href="campanas.html">📢 Campañas</a>
+
+            </div>
+            <div class="footer-enlaces">
+
+                <h3>💬 Ayuda</h3>
+
+                <a href="ayuda.html">❓ Ayuda</a>
+
+                <a href="contacto.html">📩 Contáctanos</a>
+
+                <a href="buzon.html">📬 Buzón</a>
+
+                <a href="mapa-sitio.html">
+                    🗺️ Mapa del sitio
+                </a>
+
+            </div>
+            <div class="footer-enlaces">
+
+                <h3>👤 Cuenta</h3>
+
+                <a href="login.html">
+                    🔐 Iniciar sesión
+                </a>
+
+                <a href="registro.html">
+                    📝 Registrarse
+                </a>
+
+                <a href="recuperar.html">
+                    🔑 Recuperar contraseña
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 Huellita. Todos los derechos reservados.
+            </p>
+
+            <span>
+                🐾 Hecho para ayudar a encontrar hogares.
+            </span>
+
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+<script
+    type="module"
+    src="js/buscador.js"
+></script>
+</body>
+<script
+    type="module"
+    src="js/usuario.js">
+</script>
+</html>

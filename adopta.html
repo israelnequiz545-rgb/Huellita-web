@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellita | Adopta</title>
+
+    <link rel="stylesheet" href="estilos.css/estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <span>🐾</span>
+            <div>
+                <h1>Huellita</h1>
+                <p>Adopta, ayuda y protege</p>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+
+</div>
+
+</nav>
+
+
+<div class="buscador-sitio">
+
+    <input
+        type="search"
+        id="busqueda-sitio"
+        placeholder="¿Qué buscas?"
+        autocomplete="off"
+    >
+
+    <button
+        id="btn-buscar-sitio"
+        type="button"
+        aria-label="Buscar"
+    >
+        🔍
+    </button>
+
+</div>
+
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+             <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+
+        </div>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+        <div class="acciones">
+
+            <a href="login.html" class="btn-login">
+                Iniciar sesión
+            </a>
+
+            <a href="registro.html" class="btn-registro">
+                Registrarse
+            </a>
+
+        </div>
+
+    </header>
+
+    <section class="titulo-pagina">
+        <div class="contenedor">
+            <span class="etiqueta">🐾 Adopción responsable</span>
+
+            <h1>Encuentra a tu nuevo compañero</h1>
+
+            <p>
+                Conoce a los animalitos que están buscando una familia
+                que les pueda brindar una segunda oportunidad.
+            </p>
+        </div>
+    </section>
+
+    <section class="seccion-adopta">
+        <div class="contenedor">
+
+            <div class="filtros-adopcion">
+
+                <div class="filtro">
+                    <label for="filtro-especie">Especie</label>
+
+                    <select id="filtro-especie">
+                        <option value="">Todas</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </div>
+
+
+                <div class="filtro">
+                    <label for="filtro-tamano">Tamaño</label>
+
+                    <select id="filtro-tamano">
+                        <option value="">Todos</option>
+                        <option value="pequeno">Pequeño</option>
+                        <option value="mediano">Mediano</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+
+
+                <div class="filtro">
+                    <label for="filtro-edad">Edad</label>
+
+                    <select id="filtro-edad">
+                        <option value="">Todas</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="joven">Joven</option>
+                        <option value="adulto">Adulto</option>
+                        <option value="senior">Senior</option>
+                    </select>
+                </div>
+
+
+                <div class="filtro">
+                    <label for="filtro-sexo">Sexo</label>
+
+                    <select id="filtro-sexo">
+                        <option value="">Todos</option>
+                        <option value="macho">Macho</option>
+                        <option value="hembra">Hembra</option>
+                    </select>
+                </div>
+
+
+                <button class="btn-principal" onclick="filtrarAnimales()">
+                    🔎 Buscar
+                </button>
+
+            </div>
+
+
+            <p id="mensaje-filtro" class="mensaje-filtro"></p>
+
+<div class="titulo-seccion-adopta">
+
+    <h2>Animalitos disponibles</h2>
+
+    <span id="contador-animales">
+        0 animalitos
+    </span>
+
+</div>
+
+
+<div class="grid-animales" id="lista-animales">
+</div>
+
+
+<div id="sin-resultados" class="sin-resultados">
+
+    <div>🐾</div>
+
+    <h3>No encontramos animalitos</h3>
+
+    <p>
+        Intenta cambiar los filtros para encontrar
+        más opciones.
+    </p>
+
+</div>
+    <!-- CHAT -->
+    <a href="chat.html" class="chat-boton">
+        💬
+    </a>
+
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+
+
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+
+    <script src="js/script.js"></script>
+    <script
+    type="module"
+    src="js/adopta-firebase.js">
+</script>
+<script
+    type="module"
+    src="js/buscador.js"
+></script>
+</body>
+<script
+    type="module"
+    src="js/usuario.js">
+</script>
+</html>

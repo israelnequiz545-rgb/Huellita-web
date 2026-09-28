@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huellita | Adopta, ayuda y protege</title>
+
+    <link rel="stylesheet" href="estilos.css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+
+        <div class="logo">
+            <span>🐾</span>
+            <div>
+                <h1>Huellita</h1>
+                <p>Adopta, ayuda y protege</p>
+            </div>
+        </div>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+<div class="buscador-sitio">
+
+    <input
+        type="search"
+        id="busqueda-sitio"
+        placeholder="¿Qué buscas?"
+        autocomplete="off"
+    >
+
+    <button
+        id="btn-buscar-sitio"
+        type="button"
+        aria-label="Buscar"
+    >
+        🔍
+    </button>
+
+</div>
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+             <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+            
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+        <div class="acciones">
+
+            <a href="login.html" class="btn-login">
+                Iniciar sesión
+            </a>
+
+            <a href="registro.html" class="btn-registro">
+                Registrarse
+            </a>
+
+        </div>
+
+    </header>
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <span class="etiqueta">
+                    🐾 Bienvenido a Huellita
+                </span>
+
+                <h2>
+                    Una segunda oportunidad
+                    <span>comienza con una huellita</span>
+                </h2>
+
+                <p>
+                    Encuentra un nuevo compañero, reporta una mascota
+                    extraviada o encontrada y conoce las próximas campañas
+                    de bienestar animal.
+                </p>
+
+                <div class="hero-botones">
+
+                    <a href="adopta.html" class="btn-principal">
+                        🐶 Ver animales
+                    </a>
+
+                    <a href="extraviados.html" class="btn-secundario">
+                        🔎 Buscar mascota
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-imagen">
+
+                <div class="imagen-animal">
+                    🐶
+                </div>
+
+                <div class="tarjeta-flotante">
+
+                    <strong>¿Listo para adoptar?</strong>
+
+                    <span>
+                        Hay una huellita esperando por ti ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="busqueda">
+
+            <div class="titulo-seccion">
+
+                <span>🔎</span>
+
+                <div>
+                    <h2>Encuentra a tu nuevo compañero</h2>
+                    <p>
+                        Utiliza nuestros filtros para encontrar
+                        un animal que se adapte a ti.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="filtros">
+
+                <div class="campo">
+
+                    <label for="especie">
+                        Especie
+                    </label>
+
+                    <select id="especie">
+
+                        <option value="">
+                            Todas
+                        </option>
+
+                        <option value="perro">
+                            Perro
+                        </option>
+
+                        <option value="gato">
+                            Gato
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="tamano">
+                        Tamaño
+                    </label>
+
+                    <select id="tamano">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="pequeno">
+                            Pequeño
+                        </option>
+
+                        <option value="mediano">
+                            Mediano
+                        </option>
+
+                        <option value="grande">
+                            Grande
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="edad">
+                        Edad
+                    </label>
+
+                    <select id="edad">
+
+                        <option value="">
+                            Todas
+                        </option>
+
+                        <option value="cachorro">
+                            Cachorro
+                        </option>
+
+                        <option value="joven">
+                            Joven
+                        </option>
+
+                        <option value="adulto">
+                            Adulto
+                        </option>
+
+                        <option value="senior">
+                            Senior
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="btn-buscar" onclick="buscarAnimal()">
+                    Buscar 🔍
+                </button>
+
+            </div>
+
+            <p id="resultado-busqueda" class="resultado"></p>
+
+        </section>
+
+        <section class="animales">
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="mini-titulo">
+                        🐾 Conoce a nuestros animales
+                    </span>
+
+                    <h2>
+                        Ellos buscan un hogar
+                    </h2>
+
+                </div>
+
+                <a href="adopta.html" class="ver-todos">
+                    Ver todos →
+                </a>
+
+            </div>
+
+
+            <div class="tarjetas-animales">
+
+                <article class="animal-card">
+
+                    <div class="animal-foto perro">
+                        🐶
+
+                        <span class="etiqueta-adopcion">
+                            En adopción
+                        </span>
+
+                    </div>
+
+                    <div class="animal-info">
+
+                        <h3>Max</h3>
+
+                        <p class="datos">
+                            🐕 Perro · Macho · 2 años
+                        </p>
+
+                        <div class="caracteristicas">
+
+                            <span>Mediano</span>
+                            <span>Sociable</span>
+
+                        </div>
+
+                        <a href="adopta.html" class="btn-card">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+                <article class="animal-card">
+
+                    <div class="animal-foto gato">
+                        🐱
+
+                        <span class="etiqueta-adopcion">
+                            En adopción
+                        </span>
+
+                    </div>
+
+                    <div class="animal-info">
+
+                        <h3>Luna</h3>
+
+                        <p class="datos">
+                            🐈 Gata · Hembra · 1 año
+                        </p>
+
+                        <div class="caracteristicas">
+
+                            <span>Pequeña</span>
+                            <span>Tranquila</span>
+
+                        </div>
+
+                        <a href="adopta.html" class="btn-card">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+                <article class="animal-card">
+
+                    <div class="animal-foto perro">
+                        🐕
+
+                        <span class="etiqueta-adopcion">
+                            En adopción
+                        </span>
+
+                    </div>
+
+                    <div class="animal-info">
+
+                        <h3>Rocky</h3>
+
+                        <p class="datos">
+                            🐕 Perro · Macho · 3 años
+                        </p>
+
+                        <div class="caracteristicas">
+
+                            <span>Grande</span>
+                            <span>Activo</span>
+
+                        </div>
+
+                        <a href="adopta.html" class="btn-card">
+                            Ver perfil
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+        <section class="extraviados">
+
+            <div class="extraviados-texto">
+
+                <span class="mini-titulo">
+                    🐾 Ayúdanos a encontrarlos
+                </span>
+
+                <h2>
+                    ¿Perdiste o encontraste
+                    una mascota?
+                </h2>
+
+                <p>
+                    Registra un reporte para ayudar a reunir
+                    a las mascotas con sus familias.
+                </p>
+
+                <div class="botones-reporte">
+
+                    <a href="extraviados.html" class="btn-principal">
+                        Reportar extraviado
+                    </a>
+
+                    <a href="extraviados.html" class="btn-blanco">
+                        Reportar encontrado
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="extraviados-icono">
+                🔎🐾
+            </div>
+
+        </section>
+        <section class="campanas">
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="mini-titulo">
+                        ❤️ Bienestar animal
+                    </span>
+
+                    <h2>
+                        Próximas campañas
+                    </h2>
+
+                </div>
+
+                <a href="campanas.html" class="ver-todos">
+                    Ver calendario →
+                </a>
+
+            </div>
+
+
+            <div class="campanas-grid">
+
+
+                <article class="campana-card">
+
+                    <div class="campana-icono">
+                        💉
+                    </div>
+
+                    <div>
+
+                        <span class="fecha">
+                            15 OCTUBRE
+                        </span>
+
+                        <h3>
+                            Jornada de vacunación
+                        </h3>
+
+                        <p>
+                            Campaña de vacunación para perros y gatos.
+                        </p>
+
+                        <span class="ubicacion">
+                            📍 Centro comunitario
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="campana-card">
+
+                    <div class="campana-icono">
+                        🐾
+                    </div>
+
+                    <div>
+
+                        <span class="fecha">
+                            22 OCTUBRE
+                        </span>
+
+                        <h3>
+                            Campaña de esterilización
+                        </h3>
+
+                        <p>
+                            Jornada de esterilización para ayudar
+                            a controlar la sobrepoblación animal.
+                        </p>
+
+                        <span class="ubicacion">
+                            📍 Parque municipal
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+    <a href="chat.html" class="chat-boton">
+        💬
+    </a>
+<footer class="footer">
+
+    <div class="footer-contenido">
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+
+    <script src="js/script.js"></script>
+<script
+    type="module"
+    src="js/buscador.js"
+></script>
+</body>
+<script
+    type="module"
+    src="js/usuario.js">
+</script>
+
+</html>

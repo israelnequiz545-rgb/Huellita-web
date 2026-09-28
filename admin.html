@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Administración | Huellita</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css/estilos.css">
+
+</head>
+
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span>🐾</span>
+
+            <div>
+
+                <h1>Huellita</h1>
+
+                <p>
+                    Panel de administración
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-menu">
+
+            <button
+                class="usuario-boton"
+                id="btn-cerrar-sesion">
+
+                🚪 Cerrar sesión
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="admin-container">
+
+
+        <div
+            id="cargando-admin"
+            class="admin-cargando">
+
+            🔐 Verificando permisos...
+
+        </div>
+
+        <section
+            id="panel-admin"
+            style="display: none;">
+
+
+            <!-- TÍTULO -->
+
+            <div class="admin-titulo">
+
+                <div>
+
+                    <span>
+                        🐾 Administración
+                    </span>
+
+                    <h1>
+                        Panel de administración
+                    </h1>
+
+                    <p>
+                        Gestiona el contenido y las solicitudes de Huellita.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                class="admin-grid"
+                id="admin-opciones">
+
+                <article class="admin-card">
+
+                    <div class="admin-card-icono">
+                        📬
+                    </div>
+
+                    <h2>
+                        Solicitudes de adopción
+                    </h2>
+
+                    <p>
+                        Revisa y gestiona las solicitudes
+                        de adopción de los usuarios.
+                    </p>
+
+                    <button
+                        id="btn-solicitudes">
+
+                        Ver solicitudes
+
+                    </button>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-icono">
+                        💬
+                    </div>
+
+                    <h2>
+                        Chat de usuarios
+                    </h2>
+
+                    <p>
+                        Consulta los mensajes enviados por
+                        los usuarios y responde sus dudas.
+                    </p>
+
+                    <button
+                        id="btn-chat-admin">
+
+                        Ver chats
+
+                    </button>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-icono">
+                        🐶
+                    </div>
+
+                    <h2>
+                        Gestionar animales
+                    </h2>
+
+                    <p>
+                        Agrega, edita y administra
+                        los animales disponibles.
+                    </p>
+
+                    <button>
+                        Gestionar animales
+                    </button>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-icono">
+                        🔎
+                    </div>
+
+                    <h2>
+                        Reportes de extraviados
+                    </h2>
+
+                    <p>
+                        Consulta los reportes de animales
+                        extraviados y encontrados.
+                    </p>
+
+                    <button>
+                        Ver reportes
+                    </button>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-icono">
+                        📢
+                    </div>
+
+                    <h2>
+                        Campañas
+                    </h2>
+
+                    <p>
+                        Administra las campañas
+                        publicadas en Huellita.
+                    </p>
+
+                    <button>
+                        Gestionar campañas
+                    </button>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-icono">
+                        👥
+                    </div>
+
+                    <h2>
+                        Administradores
+                    </h2>
+
+                    <p>
+                        Crea y administra las cuentas
+                        de administradores.
+                    </p>
+
+                    <button>
+                        Administradores
+                    </button>
+
+                </article>
+
+
+            </div>
+
+
+            <section
+                id="seccion-solicitudes"
+                class="admin-solicitudes"
+                style="display: none;">
+
+
+                <div class="solicitudes-cabecera">
+
+                    <div>
+
+                        <span>
+                            📬 Solicitudes
+                        </span>
+
+                        <h2>
+                            Solicitudes de adopción
+                        </h2>
+
+                        <p>
+                            Aquí podrás revisar las solicitudes
+                            enviadas por los usuarios.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="btn-regresar-admin"
+                        class="btn-regresar-admin">
+
+                        ← Regresar
+
+                    </button>
+
+                </div>
+
+                <div
+                    id="cargando-solicitudes"
+                    class="admin-cargando">
+
+                    📬 Cargando solicitudes...
+
+                </div>
+
+
+                <div
+                    id="sin-solicitudes"
+                    class="sin-solicitudes"
+                    style="display: none;">
+
+                    <div class="sin-solicitudes-icono">
+                        🐾
+                    </div>
+
+                    <h3>
+                        No hay solicitudes
+                    </h3>
+
+                    <p>
+                        Cuando un usuario solicite adoptar
+                        un animal, aparecerá aquí.
+                    </p>
+
+                </div>
+
+                <div
+                    id="lista-solicitudes"
+                    class="lista-solicitudes">
+
+                </div>
+
+
+            </section>
+
+
+            <section
+                id="seccion-chat-admin"
+                class="admin-solicitudes"
+                style="display: none;">
+
+
+                <div class="solicitudes-cabecera">
+
+                    <div>
+
+                        <span>
+                            💬 Chat
+                        </span>
+
+                        <h2>
+                            Mensajes de usuarios
+                        </h2>
+
+                        <p>
+                            Revisa y responde los mensajes
+                            enviados al chat.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="btn-regresar-chat-admin"
+                        class="btn-regresar-admin">
+
+                        ← Regresar
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="lista-chats-admin"
+                    class="lista-solicitudes">
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+    <div
+        id="modal-responder-chat"
+        class="modal-chat"
+        style="display: none;">
+
+
+        <div class="modal-chat-contenido">
+
+            <button
+                type="button"
+                id="cerrar-modal-chat"
+                class="modal-chat-cerrar">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-chat-icono">
+                💬
+            </div>
+
+
+
+            <h2>
+                Responder mensaje
+            </h2>
+
+
+
+            <p id="nombre-usuario-chat">
+                Usuario
+            </p>
+
+
+
+            <!-- RESPUESTA -->
+
+            <textarea
+                id="respuesta-chat"
+                placeholder="Escribe tu respuesta..."
+                rows="5">
+            </textarea>
+
+            <p
+                id="error-respuesta-chat"
+                class="error-chat">
+            </p>
+
+
+
+       
+
+            <div class="modal-chat-botones">
+
+                <button
+                    type="button"
+                    id="cancelar-respuesta-chat"
+                    class="btn-cancelar-chat">
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="enviar-respuesta-chat"
+                    class="btn-enviar-chat">
+
+                    💬 Enviar respuesta
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script
+        type="module"
+        src="js/admin.js">
+    </script>
+
+
+    <script
+        type="module"
+        src="js/buscador.js">
+    </script>
+
+
+</body>
+
+</html>

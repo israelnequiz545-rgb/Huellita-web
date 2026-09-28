@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mis solicitudes | Huellita</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css/estilos.css"
+    >
+
+</head>
+
+<body>
+    <header>
+
+        <header class="encabezado">
+
+        <div class="logo">
+            🐾 Huellita
+        </div>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+            <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+    </header>
+
+    </header>
+
+    <main class="mis-solicitudes-container">
+
+        <section class="mis-solicitudes-card">
+
+            <h1>
+                🐾 Mis solicitudes
+            </h1>
+
+            <p class="mis-solicitudes-subtitulo">
+                Consulta el estado de tus solicitudes de adopción.
+            </p>
+
+
+            <div
+                id="cargando-solicitudes"
+                class="cargando-solicitudes"
+            >
+                Cargando solicitudes...
+            </div>
+
+
+            <div
+                id="sin-solicitudes"
+                class="sin-solicitudes"
+                style="display: none;"
+            >
+
+                <div class="sin-solicitudes-icono">
+                    🐶
+                </div>
+
+                <h2>
+                    Aún no tienes solicitudes
+                </h2>
+
+                <p>
+                    Cuando solicites adoptar un animalito,
+                    aparecerá aquí.
+                </p>
+
+                <a
+                    href="adopta.html"
+                    class="btn-ver-animales"
+                >
+                    🐾 Ver animales
+                </a>
+
+            </div>
+
+
+            <div
+                id="lista-solicitudes-usuario"
+                class="lista-solicitudes-usuario"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Huellita | Portal de Bienestar y Adopción Animal Responsable
+        </p>
+
+    </footer>
+
+
+    <script
+        type="module"
+        src="js/mis-solicitudes.js"
+    ></script>
+
+    <script
+        type="module"
+        src="js/usuario.js"
+    ></script>
+
+</body>
+
+</html>

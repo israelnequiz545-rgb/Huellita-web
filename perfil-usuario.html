@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mi perfil | Huellita</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css/estilos.css"
+    >
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            🐾 Huellita
+        </div>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+             <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+    </header>
+
+
+    <main class="perfil-usuario-container">
+
+        <section class="perfil-usuario-card">
+
+            <div class="perfil-usuario-icono">
+                🐶
+            </div>
+
+            <h1>
+                Mi perfil
+            </h1>
+
+            <p class="perfil-usuario-subtitulo">
+                Consulta la información de tu cuenta
+            </p>
+
+
+            <div
+                id="cargando-perfil"
+                class="cargando-perfil"
+            >
+                Cargando información...
+            </div>
+
+
+            <div
+                id="datos-perfil"
+                style="display: none;"
+            >
+
+                <div class="dato-perfil">
+
+                    <span>
+                        👤 Nombre
+                    </span>
+
+                    <strong id="perfil-nombre">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato-perfil">
+
+                    <span>
+                        📧 Correo electrónico
+                    </span>
+
+                    <strong id="perfil-correo">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato-perfil">
+
+                    <span>
+                        🛡️ Tipo de cuenta
+                    </span>
+
+                    <strong id="perfil-rol">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="dato-perfil">
+
+                    <span>
+                        📅 Fecha de registro
+                    </span>
+
+                    <strong id="perfil-fecha">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="mensaje-perfil"
+                class="mensaje-perfil"
+            ></div>
+
+
+        </section>
+
+    </main>
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+    <script
+        type="module"
+        src="js/perfil-usuario.js"
+    ></script>
+
+    <script
+        type="module"
+        src="js/usuario.js"
+    ></script>
+
+</body>
+
+</html>

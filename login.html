@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | Huellita</title>
+
+    <link rel="stylesheet"
+          href="estilos.css/estilos.css">
+
+</head>
+
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            🐾 Huellita
+        </div>
+
+<nav class="menu">
+
+    <a href="index.html">
+        Inicio
+    </a>
+
+    <a href="adopta.html">
+        Adopta
+    </a>
+
+    <a href="extraviados.html">
+        Extraviados
+    </a>
+
+    <a href="campanas.html">
+        Campañas
+    </a>
+
+    <a href="ayuda.html">
+        Ayuda
+    </a>
+
+    <a href="contacto.html">
+        Contacto
+    </a>
+
+</nav>
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+            <a href="adopta.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+    </header>
+
+
+    <main class="login-container">
+
+    <div class="registro-card login-card">
+        <div class="registro-presentacion">
+
+            <div class="huellitas">
+                🐾
+            </div>
+
+            <h1>
+                Qué bueno<br>
+                <span>verte de nuevo</span> 🐶
+            </h1>
+
+            <p>
+                Inicia sesión en tu cuenta de Huellita
+                y continúa ayudando a nuestros animalitos
+                a encontrar un hogar lleno de cariño.
+            </p>
+
+
+            <div class="beneficios">
+
+                <div>
+                    <span>🐾</span>
+                    <p>Encuentra animalitos para adoptar</p>
+                </div>
+
+                <div>
+                    <span>💬</span>
+                    <p>Comunícate con Huellita</p>
+                </div>
+
+                <div>
+                    <span>❤️</span>
+                    <p>Forma parte de nuestra comunidad</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="registro-formulario">
+
+            <div class="titulo-formulario">
+
+                <span class="icono-cuenta">
+                    🔐
+                </span>
+
+                <h2>
+                    Iniciar sesión
+                </h2>
+
+                <p>
+                    Ingresa tus datos para continuar
+                </p>
+
+            </div>
+
+
+            <form id="form-login">
+
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
+
+                    <div class="input-con-icono">
+
+                        <span>✉️</span>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            placeholder="correo@ejemplo.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="contrasena">
+                        Contraseña
+                    </label>
+
+                    <div class="input-con-icono">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            id="contrasena"
+                            placeholder="Tu contraseña"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-crear-cuenta">
+
+                    Entrar a mi cuenta
+
+                    <span>→</span>
+
+                </button>
+
+            </form>
+
+
+<p
+    id="mensaje-login"
+    class="mensaje-registro">
+</p>
+
+
+<a
+    href="#"
+    id="btn-recuperar"
+    class="enlace-recuperar">
+
+    🔑 ¿Olvidaste tu contraseña?
+
+</a>
+
+
+<div
+    id="form-recuperar"
+    class="form-recuperar"
+    style="display: none;">
+
+    <div class="campo">
+
+        <label for="correo-recuperar">
+            Correo para recuperar contraseña
+        </label>
+
+        <div class="input-con-icono">
+
+            <span>✉️</span>
+
+            <input
+                type="email"
+                id="correo-recuperar"
+                placeholder="correo@ejemplo.com">
+
+        </div>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="btn-enviar-recuperacion"
+        class="btn-crear-cuenta">
+
+        Enviar enlace
+
+        <span>→</span>
+
+    </button>
+
+    <p
+        id="mensaje-recuperacion"
+        class="mensaje-registro">
+    </p>
+
+</div>
+            <div class="separador">
+
+                <span>
+                    ¿Todavía no tienes una cuenta?
+                </span>
+
+            </div>
+
+
+            <a
+                href="registro.html"
+                class="btn-iniciar">
+
+                Crear una cuenta
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+    <script type="module"
+            src="js/login.js">
+    </script>
+
+</body>
+
+</html>

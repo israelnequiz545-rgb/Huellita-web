@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Buzón | Huellita</title>
+
+    <link rel="stylesheet"
+          href="estilos.css/estilos.css">
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            🐾 Huellita
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+
+<div class="buscador-sitio">
+
+    <input
+        type="search"
+        id="busqueda-sitio"
+        placeholder="¿Qué buscas?"
+        autocomplete="off"
+    >
+
+    <button
+        id="btn-buscar-sitio"
+        type="button"
+        aria-label="Buscar"
+    >
+        🔍
+    </button>
+
+</div>
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+             <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+    </header>
+
+
+    <main class="buzon-container">
+
+        <div class="titulo-seccion">
+
+            <h1>📬 Buzón</h1>
+
+            <p>
+                Aquí podrás consultar tus mensajes y solicitudes.
+            </p>
+
+        </div>
+
+
+        <div id="lista-mensajes">
+
+            <p id="cargando-mensajes">
+                Cargando mensajes...
+            </p>
+
+        </div>
+
+
+        <div id="sin-mensajes"
+             style="display: none;">
+
+            <div>
+                🐾
+            </div>
+
+            <h3>
+                No tienes mensajes
+            </h3>
+
+            <p>
+                Cuando recibas una solicitud o mensaje,
+                aparecerá aquí.
+            </p>
+
+        </div>
+
+    </main>
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+    <script type="module"
+            src="js/buzon.js">
+    </script>
+<script
+    type="module"
+    src="js/buscador.js">
+</script>
+</body>
+<script
+    type="module"
+    src="js/usuario.js">
+</script>
+</html>

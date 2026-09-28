@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil del animal | Huellita</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span>🐾</span>
+
+            <div>
+
+                <h1>Huellita</h1>
+
+                <p>
+                    Adopta, ayuda y protege
+                </p>
+
+            </div>
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+            <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+
+        <div class="acciones">
+
+            <a
+                href="login.html"
+                class="btn-login">
+
+                Iniciar sesión
+
+            </a>
+
+
+            <a
+                href="registro.html"
+                class="btn-registro">
+
+                Registrarse
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="perfil-container">
+
+        <a
+            href="adopta.html"
+            class="btn-regresar">
+
+            ← Regresar a adopciones
+
+        </a>
+
+
+        <p id="cargando">
+
+            Cargando información...
+
+        </p>
+
+
+        <section
+            class="perfil-animal"
+            id="perfil-animal"
+            style="display: none;">
+
+            <!-- IMAGEN -->
+
+            <div class="perfil-imagen">
+
+                <img
+                    id="imagen-animal"
+                    src="img/default.jpg"
+                    alt="Animal">
+
+            </div>
+
+            <div class="perfil-info">
+
+                <span
+                    class="estado-adopcion"
+                    id="estado-animal">
+
+                    🟢 Disponible para adopción
+
+                </span>
+
+
+                <h1 id="nombre-animal">
+                    Animal
+                </h1>
+
+
+                <p
+                    class="descripcion"
+                    id="descripcion-animal">
+
+                </p>
+
+
+                <div class="datos-animal">
+
+
+                    <div>
+
+                        <strong>
+                            🐕 Especie
+                        </strong>
+
+                        <span id="especie-animal">
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            🎂 Edad
+                        </strong>
+
+                        <span id="edad-animal">
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            ♂️ Sexo
+                        </strong>
+
+                        <span id="sexo-animal">
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            📏 Tamaño
+                        </strong>
+
+                        <span id="tamano-animal">
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            📍 Ubicación
+                        </strong>
+
+                        <span>
+                            Ciudad de México
+                        </span>
+
+                    </div>
+                     <div>
+
+                        <strong>
+                            ❤️ Personalidad
+                        </strong>
+
+                        <span>
+                            Amigable y cariñoso
+                        </span>
+
+                    </div>
+
+
+                </div>
+                <button
+                    class="btn-adoptar"
+                    id="btn-adoptar">
+
+                    🐾 Solicitar adopción
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+    </main>
+<div
+    class="modal-adopcion"
+    id="modal-adopcion">
+
+    <div class="modal-contenido">
+
+        <button
+            class="modal-cerrar"
+            id="cerrar-modal">
+
+            ✕
+
+        </button>
+
+
+        <div class="modal-icono">
+            🐾
+        </div>
+
+
+        <h2>
+            Solicitud de adopción
+        </h2>
+
+
+        <p class="modal-subtitulo">
+
+            Estás interesado en adoptar a
+
+            <strong id="modal-nombre-animal">
+                este animalito
+            </strong>
+
+        </p>
+
+
+        <form id="form-adopcion">
+
+            <label for="mensaje-adopcion">
+
+                ¿Por qué te gustaría adoptarlo?
+
+            </label>
+
+
+            <textarea
+                id="mensaje-adopcion"
+                placeholder="Cuéntanos un poco sobre por qué te gustaría darle un hogar..."
+                required>
+            </textarea>
+
+
+            <p
+                class="mensaje-adopcion"
+                id="mensaje-adopcion-resultado">
+            </p>
+
+
+            <div class="modal-botones">
+
+                <button
+                    type="button"
+                    class="btn-cancelar"
+                    id="cancelar-adopcion">
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn-enviar-adopcion">
+
+                    🐾 Enviar solicitud
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<div
+    class="modal-login"
+    id="modal-login">
+
+    <div class="modal-login-contenido">
+
+        <button
+            class="modal-cerrar"
+            id="cerrar-modal-login">
+
+            ✕
+
+        </button>
+
+
+        <div class="modal-login-icono">
+            🔐
+        </div>
+
+
+        <h2>
+            Inicia sesión
+        </h2>
+
+
+        <p>
+
+            Para solicitar la adopción de
+
+            <strong id="login-nombre-animal">
+                este animalito
+            </strong>
+
+            necesitas iniciar sesión
+            en tu cuenta de Huellita.
+
+        </p>
+
+        <a
+            href="login.html"
+            class="btn-modal-login">
+
+            🔐 Iniciar sesión
+
+        </a>
+
+
+        <div class="modal-login-separador">
+
+            <span>
+                ¿Todavía no tienes una cuenta?
+            </span>
+
+        </div>
+
+
+        <a
+            href="registro.html"
+            class="btn-modal-registro">
+
+            Crear una cuenta
+
+        </a>
+
+    </div>
+
+</div>
+    <div
+        class="chat-button"
+        onclick="abrirChat()">
+
+        💬
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+
+            <div class="footer-logo">
+
+                <h2>
+                    🐾 Huellita
+                </h2>
+
+                <p>
+                    Adopta, ayuda y protege.
+                </p>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>
+                    Portal
+                </h3>
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="adopta.html">
+                    Adopta
+                </a>
+
+                <a href="extraviados.html">
+                    Extraviados y encontrados
+                </a>
+
+                <a href="campanas.html">
+                    Campañas
+                </a>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>
+                    Ayuda
+                </h3>
+
+                <a href="ayuda.html">
+                    Ayuda
+                </a>
+
+                <a href="contacto.html">
+                    Contáctanos
+                </a>
+
+                <a href="buzon.html">
+                    Buzón
+                </a>
+
+                <a href="mapa-sitio.html">
+                    Mapa del sitio
+                </a>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h3>
+                    Cuenta
+                </h3>
+
+                <a href="login.html">
+                    Iniciar sesión
+                </a>
+
+                <a href="registro.html">
+                    Registrarse
+                </a>
+
+                <a href="recuperar.html">
+                    Recuperar contraseña
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-final">
+
+            <p>
+                © 2026 Huellita. Todos los derechos reservados.
+            </p>
+
+            <span>
+                🐾 Hecho para ayudar a encontrar hogares.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+    <script
+        type="module"
+        src="js/perfil-animal.js">
+    </script>
+
+</body>
+<script
+    type="module"
+    src="js/usuario.js">
+</script>
+</html>

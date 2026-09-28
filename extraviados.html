@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huellita | Extraviados y encontrados</title>
+
+    <link rel="stylesheet" href="estilos.css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+
+        <div class="logo">
+            <span>🐾</span>
+
+            <div>
+                <h1>Huellita</h1>
+                <p>Adopta, ayuda y protege</p>
+            </div>
+        </div>
+        <nav class="menu">
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contacto
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa
+            </a>
+
+        </nav>
+<div class="buscador-sitio">
+
+    <input
+        type="search"
+        id="busqueda-sitio"
+        placeholder="¿Qué buscas?"
+        autocomplete="off"
+    >
+
+    <button
+        id="btn-buscar-sitio"
+        type="button"
+        aria-label="Buscar"
+    >
+        🔍
+    </button>
+
+</div>
+
+<div class="usuario-menu" id="usuario-menu">
+
+    <button
+        class="usuario-boton"
+        id="usuario-boton">
+
+        <div class="usuario-avatar">
+            🐶
+        </div>
+
+        <span id="nombre-usuario">
+            Mi cuenta
+        </span>
+
+        <span class="flecha">
+            ▾
+        </span>
+
+    </button>
+
+
+    <div
+        class="usuario-desplegable"
+        id="usuario-desplegable">
+
+        <div class="usuario-cabecera">
+
+            <div class="usuario-avatar grande">
+                🐶
+            </div>
+
+            <div>
+
+                <strong id="usuario-nombre-menu">
+                    Mi cuenta
+                </strong>
+
+                <span id="usuario-correo-menu">
+                    Inicia sesión
+                </span>
+
+            </div>
+
+        </div>
+        <div class="usuario-opciones">
+
+            <a href="perfil-usuario.html">
+                👤 Mi perfil
+            </a>
+
+            <a href="buzon.html">
+                📬 Mi buzón
+            </a>
+
+             <a href="mis-solicitudes.html">
+                🐾 Mis solicitudes
+            </a>
+<a
+    href="admin.html"
+    id="enlace-administrador"
+    style="display: none;">
+
+    ⚙️ Panel de administración
+
+</a>
+        </div>
+
+
+        <button
+            class="btn-cerrar-sesion"
+            id="btn-cerrar-sesion">
+
+            🚪 Cerrar sesión
+
+        </button>
+
+    </div>
+
+</div>
+        <div class="acciones">
+
+            <a href="login.html" class="btn-login">
+                Iniciar sesión
+            </a>
+
+            <a href="registro.html" class="btn-registro">
+                Registrarse
+            </a>
+
+        </div>
+
+    </header>
+
+    <section class="titulo-pagina">
+
+        <h1>
+            Animales extraviados y encontrados
+        </h1>
+
+        <p>
+            Ayudemos a que cada animal pueda regresar a casa.
+        </p>
+
+    </section>
+
+    <main class="seccion-extraviados">
+
+        <section class="filtros-extraviados">
+
+            <h2>
+                Buscar un reporte
+            </h2>
+
+
+            <div class="filtros-reporte">
+
+                <div class="filtro">
+
+                    <label for="filtro-tipo">
+                        Tipo de reporte
+                    </label>
+
+                    <select id="filtro-tipo">
+
+                        <option value="">
+                            Todos
+                        </option>
+
+                        <option value="extraviado">
+                            Extraviado
+                        </option>
+
+                        <option value="encontrado">
+                            Encontrado
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro">
+
+                    <label for="filtro-especie-reporte">
+                        Especie
+                    </label>
+
+                    <select id="filtro-especie-reporte">
+
+                        <option value="">
+                            Todas
+                        </option>
+
+                        <option value="perro">
+                            Perro
+                        </option>
+
+                        <option value="gato">
+                            Gato
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filtro">
+
+                    <label for="filtro-zona">
+                        Zona
+                    </label>
+
+                    <input
+                        type="text"
+                        id="filtro-zona"
+                        placeholder="Ej. Nezahualcóyotl"
+                    >
+
+                </div>
+
+
+                <button
+                    class="btn-buscar-reporte"
+                    onclick="filtrarReportes()">
+
+                    🔎 Buscar
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <div class="encabezado-reportes">
+
+            <h2>
+                Reportes recientes
+            </h2>
+
+            <span id="contador-reportes">
+                4 reportes
+            </span>
+
+        </div>
+
+        <section class="grid-reportes" id="grid-reportes">
+
+            <article
+                class="reporte-card"
+                data-tipo="extraviado"
+                data-especie="perro"
+                data-zona="nezahualcoyotl">
+
+                <div class="reporte-imagen">
+
+                    🐶
+
+                    <span class="estado-reporte extraviado">
+                        🔴 Extraviado
+                    </span>
+
+                </div>
+
+
+                <div class="reporte-info">
+
+                    <h3>
+                        Bruno
+                    </h3>
+
+                    <p>
+                        Perro mediano de color café con blanco.
+                        Se perdió cerca de una zona residencial.
+                    </p>
+
+
+                    <div class="datos-reporte">
+
+                        <span>
+                            🐕 Perro
+                        </span>
+
+                        <span>
+                            📍 Nezahualcóyotl
+                        </span>
+
+                        <span>
+                            📅 20 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-reporte"
+                        onclick="verReporte('Bruno')">
+
+                        Ver reporte
+
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="reporte-card"
+                data-tipo="encontrado"
+                data-especie="gato"
+                data-zona="chalco">
+
+                <div class="reporte-imagen">
+
+                    🐱
+
+                    <span class="estado-reporte encontrado">
+                        🟢 Encontrado
+                    </span>
+
+                </div>
+
+
+                <div class="reporte-info">
+
+                    <h3>
+                        Michi
+                    </h3>
+
+                    <p>
+                        Gato pequeño de color gris encontrado
+                        cerca de un parque.
+                    </p>
+
+
+                    <div class="datos-reporte">
+
+                        <span>
+                            🐱 Gato
+                        </span>
+
+                        <span>
+                            📍 Chalco
+                        </span>
+
+                        <span>
+                            📅 21 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-reporte"
+                        onclick="verReporte('Michi')">
+
+                        Ver reporte
+
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article
+                class="reporte-card"
+                data-tipo="extraviado"
+                data-especie="gato"
+                data-zona="iztapalapa">
+
+                <div class="reporte-imagen">
+
+                    🐱
+
+                    <span class="estado-reporte extraviado">
+                        🔴 Extraviado
+                    </span>
+
+                </div>
+
+
+                <div class="reporte-info">
+
+                    <h3>
+                        Milo
+                    </h3>
+
+                    <p>
+                        Gato de tamaño mediano, color naranja,
+                        muy tranquilo y amigable.
+                    </p>
+
+
+                    <div class="datos-reporte">
+
+                        <span>
+                            🐱 Gato
+                        </span>
+
+                        <span>
+                            📍 Iztapalapa
+                        </span>
+
+                        <span>
+                            📅 22 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-reporte"
+                        onclick="verReporte('Milo')">
+
+                        Ver reporte
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article
+                class="reporte-card"
+                data-tipo="encontrado"
+                data-especie="perro"
+                data-zona="ecatepec">
+
+                <div class="reporte-imagen">
+
+                    🐶
+
+                    <span class="estado-reporte encontrado">
+                        🟢 Encontrado
+                    </span>
+
+                </div>
+
+
+                <div class="reporte-info">
+
+                    <h3>
+                        Max
+                    </h3>
+
+                    <p>
+                        Perro pequeño de color negro encontrado
+                        caminando cerca de una avenida.
+                    </p>
+
+
+                    <div class="datos-reporte">
+
+                        <span>
+                            🐶 Perro
+                        </span>
+
+                        <span>
+                            📍 Ecatepec
+                        </span>
+
+                        <span>
+                            📅 23 Sep 2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-reporte"
+                        onclick="verReporte('Max')">
+
+                        Ver reporte
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <div
+            class="sin-resultados-reportes"
+            id="sin-resultados-reportes">
+
+            <h3>
+                🐾 No encontramos reportes
+            </h3>
+
+            <p>
+                Intenta cambiar los filtros de búsqueda.
+            </p>
+
+        </div>
+        <section class="crear-reporte">
+
+            <div>
+
+                <h2>
+                    ¿Perdiste o encontraste un animal?
+                </h2>
+
+                <p>
+                    Puedes registrar un reporte para ayudar
+                    a reunir a las mascotas con sus familias.
+                </p>
+
+            </div>
+
+
+            <a
+                href="crear-reporte.html"
+                class="btn-crear-reporte">
+
+                📝 Crear reporte
+
+            </a>
+
+        </section>
+
+    </main>
+    <a href="chat.html" class="chat-boton">
+        💬
+    </a>
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-logo">
+
+            <h2>🐾 Huellita</h2>
+
+            <p>
+                Adopta, ayuda y protege.
+            </p>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>🌐 Portal</h3>
+
+            <a href="index.html">
+                🏠 Inicio
+            </a>
+
+            <a href="adopta.html">
+                🐶 Adopta
+            </a>
+
+            <a href="extraviados.html">
+                🔎 Extraviados y encontrados
+            </a>
+
+            <a href="campanas.html">
+                📢 Campañas
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>💬 Ayuda</h3>
+
+            <a href="ayuda.html">
+                ❓ Ayuda
+            </a>
+
+            <a href="contacto.html">
+                📩 Contáctanos
+            </a>
+
+            <a href="buzon.html">
+                📬 Buzón
+            </a>
+
+            <a href="mapa-sitio.html">
+                🗺️ Mapa del sitio
+            </a>
+
+        </div>
+        <div class="footer-enlaces">
+
+            <h3>👤 Cuenta</h3>
+
+            <a href="login.html">
+                🔐 Iniciar sesión
+            </a>
+
+            <a href="registro.html">
+                📝 Registrarse
+            </a>
+
+            <a href="recuperar.html">
+                🔑 Recuperar contraseña
+            </a>
+
+        </div>
+
+
+    </div>
+    <div class="footer-final">
+
+        <p>
+            © 2026 Huellita. Todos los derechos reservados.
+        </p>
+
+        <span>
+            🐾 Hecho para ayudar a encontrar hogares.
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+    <script src="js/script.js"></script>
+
+</body> 
+<script
+    type="module"
+    src="js/usuario.js">
+</script>
+</html>
